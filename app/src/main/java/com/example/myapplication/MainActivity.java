@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -55,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
         btnRetrieveView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Retrieve View", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, "Retrieve View", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(),MainActivity2.class);
+                startActivity(intent);
             }
         });
     }
